@@ -1,15 +1,14 @@
 import './App.css';
+import Footer from './components/Footer';
+import MyInfo from './components/MyInfo';
+import Headers from './components/Header';
 
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-      <p>This is my first react application.</p>
-      <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li>Third Item</li>
-      </ul>
+    <div className='App'>
+      <Headers />
+      <MyInfo />
+      <Footer/>
     </div>
   );
 }
