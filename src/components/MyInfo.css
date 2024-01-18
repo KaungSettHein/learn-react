@@ -1,0 +1,15 @@
+.MyInfo>h1{
+    color: aqua;
+    font-style: bold;
+}
+
+.MyInfo>p{
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+    color: brown;
+}
+
+ul{
+    color: red;
+}
