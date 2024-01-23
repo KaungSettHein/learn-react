@@ -46,3 +46,14 @@ body{
   align-items: center;
 }
 
+p{
+  font-size: 18px;
+  font-weight: bold;
+  color: darkgreen;
+  padding-bottom: 10px;
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
