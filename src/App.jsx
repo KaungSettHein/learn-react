@@ -5,11 +5,11 @@ import MyInfo from './components/MyInfo';
 import Headers from './components/Header';
 import TodoItem from './components/TodoItem';
 import Joke from './components/Joke';
+import Form from './components/Form';
 import products from './data/products';
 import Product from './components/Product';
 import todoData from './data/tododata';
-
-
+import TravelForm from './components/TravelForm';
 
 class App extends React.Component{
   constructor(){
@@ -46,16 +46,19 @@ class App extends React.Component{
     return (
       <div>
   
-        <div className='App'>
+        {/* <div className='App'>
           <Headers />
           <h1 style={styles}>Good {dayTime}! Mr.{this.state.name}</h1>
           <p>Is your age {this.state.age}?</p>
-        </div>
+        </div> */}
         
-        <div className='todo-list'>
+        {/* <div className='todo-list'>
           {todolist}
-        </div>
-  
+        </div> */}
+
+        {/* <Form /> */}
+        <TravelForm />
+
         {/* <Joke quest="one" ans="one" />
         <Joke quest="two" ans="two" />
         <Joke quest="three" ans="three" />
