@@ -10,6 +10,7 @@ import products from './data/products';
 import Product from './components/Product';
 import todoData from './data/tododata';
 import TravelForm from './components/TravelForm';
+import MemeGenerator from './components/MemeGenerator';
 
 class App extends React.Component{
   constructor(){
@@ -41,13 +42,12 @@ class App extends React.Component{
   
     const productslist = products.map((p) => <Product key={p.id} product={p}/> )
     const todolist = this.state.todos.map((t) => <TodoItem key={t.id} items={t}/>)
-    console.log('this',todolist);    
+    // console.log('this',todolist);    
 
     return (
       <div>
-  
+        <Headers />
         {/* <div className='App'>
-          <Headers />
           <h1 style={styles}>Good {dayTime}! Mr.{this.state.name}</h1>
           <p>Is your age {this.state.age}?</p>
         </div> */}
@@ -57,7 +57,8 @@ class App extends React.Component{
         </div> */}
 
         {/* <Form /> */}
-        <TravelForm />
+        {/* <TravelForm /> */}
+        <MemeGenerator/>
 
         {/* <Joke quest="one" ans="one" />
         <Joke quest="two" ans="two" />
