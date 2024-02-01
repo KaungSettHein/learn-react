@@ -1,16 +1,18 @@
 import './App.css';
 import React from 'react';
-import Footer from './components/Footer';
-import MyInfo from './components/MyInfo';
-import Headers from './components/Header';
-import TodoItem from './components/TodoItem';
 import Joke from './components/Joke';
+import Form from './components/Form';
+import MyInfo from './components/MyInfo';
+import Footer from './components/Footer';
+import Headers from './components/Header';
 import Product from './components/Product';
-import ConditionalRender from './components/ConditionalRender';
+import TodoItem from './components/TodoItem';.
+import TravelForm from './components/TravelForm';
 import LoginStatus from './components/LoginStatus';
+import MemeGenerator from './components/MemeGenerator';
+import ConditionalRender from './components/ConditionalRender';
 import products from './data/products';
 import todoData from './data/tododata';
-
 
 
 class App extends React.Component{
@@ -93,29 +95,32 @@ class App extends React.Component{
       dayTime = "night";
       styles.color = "orange";
     }
-    const productslist = products.map((p) => <Product key={p.id} product={p}/> )
-    const todolist = this.state.todos.map((t) => <TodoItem key={t.id} items={t} handleChange={this.handleChange}/>) 
-
+    
     let displayTxt = this.state.login ? "Logged in" : "Logged Out";
     let btnTxt = this.state.login ? "Log Out" : "Log In";
+    const productslist = products.map((p) => <Product key={p.id} product={p}/> )
+    const todolist = this.state.todos.map((t) => <TodoItem key={t.id} items={t} handleChange={this.handleChange}/>)
+    // console.log('this',todolist);    
 
     return (
       <div>
-  
-        <div className='App'>
-          <Headers />
+        {/* <div className='App'>
+           <Headers />
             <h1 style={styles}>Good {dayTime}! Mr.{this.state.name}</h1>
             <p>Is your age {this.state.age}?</p>          
                 <button onClick={this.minus}>-</button>
                 <button onClick={this.add}>+</button>
-        </div>
-        
-        {/* {this.state.isLoading == true ? <h1>Loading ...</h1> : <ConditionalRender isLoading={this.state.isLoading} />} */}        
-        
-        <div className='todo-list'>
+        </div> */}
+      
+         {/* {this.state.isLoading == true ? <h1>Loading ...</h1> : <ConditionalRender isLoading={this.state.isLoading} />} */}
+        {/* <div className='todo-list'>
           {todolist}
-        </div>
-  
+        </div> */}
+
+        {/* <Form /> */}
+        {/* <TravelForm /> */}
+        <MemeGenerator/>
+
         {/* <Joke quest="one" ans="one" />
         <Joke quest="two" ans="two" />
         <Joke quest="three" ans="three" />
